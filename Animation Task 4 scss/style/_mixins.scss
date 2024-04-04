@@ -1,0 +1,12 @@
+
+@mixin dimensions($width:0, $height:0){
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-box($justify:flex-start, $align:flex-start, $direction:row){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}

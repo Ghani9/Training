@@ -1,0 +1,52 @@
+
+@keyframes pop-up{
+  0%{
+   
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100%{
+   
+    transform: translateY( 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes find-and-books-animation {
+  from{
+    transform: translate(-50%, 200px);
+    opacity: 0;
+  }
+  to{
+    transform: translate(-50%, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes from-left{
+  from{
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes from-right{
+  from{
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@mixin animation($animation-name:'', $time:1s, $range-start:0px, $range-end:0px){
+  animation: $animation-name $time ease;
+  animation-timeline: view();
+  animation-range:$range-start $range-end;
+}

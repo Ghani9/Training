@@ -1,0 +1,14 @@
+
+
+.head-title{
+  @include grid-columns(2,7);
+  @include table-screen{
+    @include grid-columns(1,3);
+    @include flex-layout(column,'' ,center);
+    margin-bottom: 1.5rem;
+  }
+
+  .title{
+    margin-bottom: 1rem;
+  }
+}

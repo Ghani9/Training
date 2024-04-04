@@ -1,0 +1,25 @@
+
+.container{
+  font-family: sans-serif;
+  @include grid-layout(12);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 3rem;
+  p{
+    opacity: 0.5;
+    font-size: 0.9rem;
+  }
+  @include table-screen{
+    @include grid-layout(2);
+    padding-top: 2rem;
+    column-gap: 1rem;
+  }
+  @include mobile-screen{
+    @include flex-layout(column);
+    margin-top: 0;
+    row-gap: 1rem;
+  }
+
+}

@@ -1,0 +1,61 @@
+
+.hero-section{
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  position: relative;
+  width: 75%;
+  height: 600px;
+  z-index: -4;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  @import 'hero-title-info-img';
+
+  .stats-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-evenly;
+    height: 80%;
+    width: fit-content;
+    gap: 5rem;
+    margin: 0 2rem;
+    margin-right: 5rem;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    .stats{
+      .stat-number{}
+      .name-of-stats{}
+    }
+    @include tablet-screen{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 7rem 0;
+      padding: 0 0;
+      // margin-top: 3rem;
+      
+    }
+    @include mobile-screen{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      // background-color: antiquewhite;
+      // margin-bottom: 222rem;
+    }
+  }
+
+  @include tablet-screen{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15rem;
+  }
+  @include mobile-screen{
+    // background-color: antiquewhite;
+    // padding-top: 10rem;
+    margin-top: 3rem;
+    z-index: 20;
+  }
+}

@@ -1,0 +1,94 @@
+
+.sixth-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+  background-color:rgb(245, 245, 245);;
+  @include tablet-screen{
+    padding-left: 2rem;
+    align-items: flex-start;
+  }
+  a{
+    text-decoration: none;
+    color: rgba(0,0,0, 0.5);
+    // font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    &:hover{
+      color: rgba(0,0,0, 0.9);
+    }
+  }
+
+  li{
+    list-style: none;
+    margin: 0.7rem 0;
+  }
+  .part-1{
+    @include animation(pop-up, 1s, 0px, 300px);
+    // animation:  pop-up 1s ease;
+    // animation-timeline: view();
+    // animation-range:0px 300px;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    h3{
+      font-weight: 300;
+      font-size: medium;
+    }
+    @include tablet-screen{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .home{
+      @include tablet-screen{
+        grid-column: 1 / 2;
+      }
+    }
+    .practice-area{
+      @include tablet-screen{
+        grid-column: 2 / 3;
+      }
+    }
+    .services{
+
+      @include tablet-screen{
+        grid-column: 1 / 2;
+      }
+    }
+    .contact{
+      @include tablet-screen{
+        grid-column: 2 / 3;
+      }
+      address{
+        color: rgba(0,0,0, 0.5);
+        font-size: 14px;
+      }
+    }
+    .connect{
+      grid-column: 4 / 5;
+
+      .icon{
+        margin-top: 0.75rem;
+        background-color: $bg-green;
+        color: black;
+        padding:8px;
+        border-radius: 1rem;
+        transition: background-color 0.3s ease;
+        &:hover{
+          background-color: rgb(0, 184, 156);
+          cursor: pointer;
+        }
+        // padding: 1rem;
+        // z-index: 2;
+      }
+      @include tablet-screen{
+        grid-column: 2 / 3;
+      }
+    }
+  }
+  .copyright-part{
+    margin-top: 2rem;
+    color: rgba(0,0,0, 0.6);
+  }
+}

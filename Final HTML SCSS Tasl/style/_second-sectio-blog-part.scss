@@ -1,0 +1,61 @@
+
+.blog-post-section{
+  height: 500px;
+  width: 100%;
+  &>h2{
+    color: $bg-green;
+    padding-left: 3rem;
+    @include animation(pop-up, 0.8s, 0px, 300px);
+  }
+  .blog-post-cards{
+    position: absolute;
+    top: 73%;
+    width: 100%;
+    padding: 3rem 4rem;
+    display: flex;
+    gap: 2rem;
+    @include animation(pop-up, 1s, 0px, 300px);
+    .post-card{
+      display: flex;
+      flex-direction: column;
+      .post-img{
+        img{
+          width: 100%;
+          display: block;
+        }
+      }
+      .post-info{
+        background-color: white;
+        padding: 2rem 3rem;
+        @include flex-box(column,'','',2rem);
+
+        text-decoration: none;
+        .post-text{
+          text-decoration: none;
+          color: black;
+          @include fonts(1.1rem, 800);
+
+        }
+        .read-more{
+          text-decoration: none;
+          color: rgba(0,0,0, 0.5);
+          @include fonts(0.8rem, 700);
+          letter-spacing: 0.07rem;
+        }
+      }
+
+    }
+
+    @include tablet-screen{
+      top: 77%;
+      .post-card-3{
+        display: none;
+      }
+    }
+    @include mobile-screen{
+      .post-card-2{
+        display: none;
+      }
+    }
+  }
+}

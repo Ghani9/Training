@@ -1,0 +1,60 @@
+.find-and-book{
+  width: 90%;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+  bottom: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+  @include animation(find-and-books-animation, 1s, 0px, 200px);
+
+ 
+  
+  .date-arrival-div,.date-departure-div,.persons-number-div{
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    border-radius: 2rem;
+    @include flex-box('',space-around,center,9rem);
+    p{
+      @include mobile-screen{
+        text-wrap: nowrap;
+        
+      }
+    }
+    @include tablet-screen{
+      padding: 1rem 3rem;
+      justify-content: space-between;
+    }
+    @include mobile-screen{
+    }
+    @include xs-screen{
+      gap: 0;
+    }
+  }
+
+
+  .find-now-btn{
+     padding: 1rem 3rem;
+     border-radius: 2rem;
+     background-color: $bg-green;
+     color:$bg-white;
+     text-align: center;
+     width: 100%;
+     
+    }
+
+    @include tablet-screen{
+      grid-template-columns: repeat(1, 1fr);
+      width: 90%;
+      bottom: 60%;
+
+    }
+    @include mobile-screen{
+      width: 100%;
+    }
+}

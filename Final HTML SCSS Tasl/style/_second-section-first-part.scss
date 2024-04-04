@@ -1,0 +1,73 @@
+.img-and-text-section{
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  margin-bottom: 8rem;
+
+  @include tablet-screen{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @include mobile-screen{}
+
+  .image-part{
+    position: relative;
+    background-color: $bg-green;
+    height: 60vh;
+    @include animation(from-left, 1s, 0px, 300px);
+    // animation: from-left 1s ease;
+    // animation-timeline: view();
+    // animation-range:0px 300px;
+    // top: 100px;
+
+    @include small-desktop-screen{
+      height: 450px;
+    }
+
+    @include tablet-screen{
+      height: 500px;
+      width: 50%;
+    }
+    @include mobile-screen{
+      height: 35vh;
+    }
+
+    &>img{
+      width: 100%;
+      position: absolute;
+      left: 10vw;
+      top: 10%;
+      @include small-desktop-screen{
+        width: 500px;
+      }
+      @include tablet-screen{
+        top: 16%;
+      }
+      @include mobile-screen{
+        width: 150%;
+      }
+    }
+  }
+
+  .text-part{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: center;
+    
+    @include animation(from-right, 1s, 0px, 300px);
+
+    @include tablet-screen{
+      padding: 1rem 4rem;
+    }
+    @include mobile-screen{}
+    &>h2{
+      color: $bg-green;
+    }
+
+    &>p{
+      opacity: 0.5;
+    }
+  }
+}

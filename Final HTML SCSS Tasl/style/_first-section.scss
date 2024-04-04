@@ -1,0 +1,21 @@
+
+.first-section{
+
+  background-color: rgb(235, 235, 235);
+  // background-color: blanchedalmond;
+  position: relative;
+  @include size(100%, 500px);
+  // height: 500px;
+  // width: 100%;
+  
+
+  @include tablet-screen{
+    margin-top: 0rem;
+    height: 700px;
+  }
+  @include mobile-screen{
+  }
+
+  @import 'find-and-book';
+
+}

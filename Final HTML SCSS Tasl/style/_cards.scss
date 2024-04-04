@@ -1,0 +1,103 @@
+
+.services-h2-text{
+  color: $bg-green;
+  width: 80%;
+
+  position: relative;
+  top: 150px;
+  left: 5.5%;
+  @include animation(pop-up, 1s, 0px, 300px);
+  // animation: pop-up 1s ease;
+  // animation-timeline: view();
+  // animation-range:0px 300px;
+  @include tablet-screen{
+    top: 370px;
+  }
+}
+
+.service-card-section{
+
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  z-index: 1;
+  padding: 0rem 2rem;
+
+  @include animation(pop-up, 1.2s, 0px, 300px);
+  // animation: pop-up 1.2s ease;
+  // animation-timeline: view();
+  // animation-range:0px 300px;
+  .service-cards{
+    // background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 0 auto;   
+  
+    .card{
+      background-color: white;
+      padding: 3rem 4rem;
+      max-width: 500px;
+      .icon{
+        width: 70px;
+        // color: $bg-green;
+      }
+      &>h3{
+        margin: 1rem 0;
+        font-size: 1.5rem;
+      }
+      &>p{
+        line-height: 1.5rem;
+        font-size: 1rem;
+        opacity: 0.6;
+        margin-bottom: 3rem;
+      }
+      &>a{
+        text-decoration: none;
+        color: black;
+      }
+
+      @include tablet-screen{
+        padding: 2rem 3rem;
+      }
+      @include mobile-screen{
+
+      }
+    }
+    .card-1{}
+
+
+    @include extra-large-screen{
+      // background-color: rgb(110, 89, 64);
+    }
+
+    @include large-screen{
+      // background-color: azure;
+    }
+
+    @include tablet-screen{
+      top: 90%;
+      .card-3{
+        display: none;
+      }
+    }
+    @include mobile-screen{
+      .card-2{
+        display: none;
+      }
+    }
+  }
+
+  @include tablet-screen{
+    // padding-top: 400px;
+    top: 60%;
+  }
+  @include mobile-screen{
+   
+  }
+
+  
+  
+
+  
+}

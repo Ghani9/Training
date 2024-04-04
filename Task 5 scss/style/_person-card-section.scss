@@ -1,0 +1,85 @@
+
+.person-card-container{
+  bottom: 50%;
+  background-color: $color-blue;
+  color: $color-white;
+  border-radius: 1rem;
+  width: 75%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: fit-content;
+  position: relative;
+  margin-top: 12rem;
+  // right: 12rem;
+  // bottom: 5rem;
+  .person-image-container{
+    position: relative;
+    height: fit-content;
+    .bg-color-of-image{
+      background-image: radial-gradient(rgb(160, 15, 180), rgb(180, 54, 191) 80%, rgb(133, 11, 133) 90%);opacity: 0.1;
+      border-radius: 100%;
+      width: 100%;
+      height: 60%;
+      position: absolute;
+      z-index: 1;
+      bottom: 30%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+    justify-self: center;
+    padding-left: 1rem;
+    margin-top:-2rem ;
+    position: relative;
+    z-index: 2;
+    .person-image{
+      position: relative;
+      z-index: 3;
+      display: block;
+    }
+    @include tablet-screen{
+      margin-top: -11rem;
+    }
+    @include mobile-screen{}
+  }
+
+  .person-card-info{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem;
+    
+    .card-title{
+      font-size: 3rem;
+    }
+    .card-info{
+      font-size: 1.2rem;
+      line-height: 2rem;
+      @include tablet-screen{}
+    }
+
+    .person-name{
+      .name{}
+      .designation{}
+    }
+
+    @include tablet-screen{
+      text-align: center;
+    }
+    @include mobile-screen{}
+  }
+
+
+  @include tablet-screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20rem;
+  }
+
+  @include mobile-screen{
+    width: 100%;
+    margin-top: 70rem;
+  }
+}

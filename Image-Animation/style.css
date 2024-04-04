@@ -1,0 +1,224 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+/* Animations Forward */
+
+@keyframes black-gradient-move-up {
+  0%{
+    bottom: -10rem;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+
+@keyframes head-title-move-up{
+  0%{
+    bottom: 15%;
+  }
+  
+  100%{
+  bottom: 70%;
+  }
+}
+
+@keyframes info-move-up{
+  0%{
+    bottom: -10rem;
+    opacity: 0;
+  }
+  
+  100%{
+  bottom: 20%;
+  opacity: 1;
+  }
+}
+
+@keyframes img-move-up{
+  0%{
+    height: 350px;
+
+  }
+  100%{
+    height: 365px;
+  }
+}
+
+/* Animation Backwards */
+
+@keyframes black-gradient-move-down {
+  0%{
+    bottom: 0;
+  }
+  100%{
+    bottom: -10rem;
+  }
+}
+
+@keyframes head-title-move-down{
+  0%{
+    bottom: 70%;
+  }
+  
+  100%{
+  bottom: 15%;
+  }
+}
+
+@keyframes info-move-down{
+  0%{
+    bottom: 20%;
+    opacity: 1;
+  }
+  
+  100%{
+  bottom: -10rem;
+  opacity: 0;
+  }
+}
+
+@keyframes img-move-down{
+  0%{
+    height: 365px;
+
+  }
+  100%{
+    height: 350px;
+  }
+}
+
+/*  */
+
+.body-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /* background-color: 1px solid blue; */
+}
+
+.image-card-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 350px;
+  /* border: 1px solid rgb(196, 58, 58); */
+  overflow: hidden;
+}
+
+.card{
+  width: 250px;
+  height: 350px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* padding: 4rem; */
+  position: relative;
+  overflow: hidden;
+}
+
+.black-gradient{
+  position: absolute;
+  left: 0;
+  bottom:-10rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,transparent , black);
+  opacity: 1;
+}
+
+.inside-card-1{
+  background-image: url('/beach.jpg');
+
+}
+
+.inside-card-2{
+  background-image: url('/colorfull-lines.jpg');
+}
+
+.inside-card-3{
+  background-image: url('/desert.jpg');
+}
+
+.inside-card-4{
+  background-image: url('/water.jpg');
+}
+
+.card:hover{
+  animation: img-move-up 1s forwards;
+}
+
+.card:not(hover){
+  animation: img-move-down 1s 0.2s backwards;
+}
+
+.text-color{
+  color: rgb(245, 245, 245);
+}
+.head-title{
+  position: absolute;
+  bottom:15%;
+}
+
+.hidden-info{
+  position: absolute;
+  bottom: -10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.trip-info{
+  font-family: cursive;
+}
+
+.view-trip-button{
+  background-color: rgba(42, 47, 53, 0.957);
+  border: none;
+  padding: 0.6rem 1rem;
+  margin: 0 2.5rem;
+}
+
+.view-trip-button:hover{
+  cursor: pointer;
+}
+
+/* Move Up */
+.card:hover .black-gradient{
+  animation: black-gradient-move-up 1s forwards;
+}
+
+.card:hover .head-title{
+  animation: head-title-move-up 0.7s forwards;
+}
+
+.card:hover .hidden-info{
+  animation: info-move-up 0.7s forwards;
+}
+
+
+/* Move Down */
+
+.card:not(hover) .black-gradient{
+  animation: black-gradient-move-down 1s 0.4s backwards;
+}
+
+.card:not(hover) .head-title {
+  animation: head-title-move-down 0.7s 0.3s backwards;
+}
+
+.card:not(hover) .hidden-info{
+  animation: info-move-down 0.7s 0.2s backwards;
+}

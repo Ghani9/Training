@@ -1,0 +1,48 @@
+
+.box-container{
+  @include dimensions(50%, 50vh);
+  @include flex-box(center);
+  margin: 0 auto;
+  .box{
+    @include dimensions(100px, 100px);
+    margin: 0 2rem;
+  }
+
+  .box-1{
+    @include box-properties(red, flex-end);
+    &::before{
+      @include same;
+      @include dimensions(5px, 50%);
+      @include bottom-left(100%, 45%);
+    }
+
+    &::after{
+      @include same;
+      @include dimensions(166px, 5px);
+      @include bottom-left(150%, 45%);
+    }
+  }
+  .box-2{
+    @include box-properties(green);
+    &::after{
+      @include same;
+      @include dimensions(5px, 4vmax);
+
+      @include top-left(100%, 45%);
+    }
+  }
+  .box-3{
+    @include box-properties(red, flex-end);
+    &::before{
+      @include same;
+      @include dimensions(5px, 50px);
+      @include bottom-left(100%, 45%)
+    }
+
+    &::after{
+      @include same;
+      @include dimensions(166px, 5px);
+      @include bottom-right(150%, 50%);
+    }
+  }
+}
