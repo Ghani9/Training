@@ -1,0 +1,43 @@
+
+
+@mixin dimensions($width:0, $height:0){
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-box($justify:flex-start, $align:flex-start, $direction:row){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin box-properties($bg-color:black, $position:flex-start){
+  background-color: $bg-color;
+  align-self: $position;
+  position: relative;
+}
+@mixin same{
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: black;
+}
+
+@mixin bottom-left($bottom:0, $left:0){
+  bottom: $bottom;
+  left: $left;
+}
+@mixin bottom-right($bottom:0, $right:0){
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin top-left($top:0, $left:0){
+  top: $top;
+  left: $left;
+}
+@mixin top-right($top:0, $right:0){
+  top: $top;
+  right: $right;
+}

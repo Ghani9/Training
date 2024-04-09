@@ -1,0 +1,42 @@
+
+.second-section{
+
+  background-color: rgb(243, 243, 243);
+  padding-top: 4rem;
+  position: relative;
+
+  // @include desktop-screen{
+  //   padding-top: 6rem;
+  // }
+  @include tablet-screen{
+    padding-top: 4rem;
+  }
+  @include mobile-screen{}
+
+  .first-section-btn-for-cards{
+    display: flex;
+    gap: 1rem;
+
+    animation: pop-up 1s ease;
+    animation-timeline: view();
+    animation-range:0px 300px;
+    padding: 4rem 5rem;
+    .second-section-btn{
+      padding: 0.7rem 1rem;
+      font-size: 0.8rem;
+      border-radius: 2rem;
+      border: 1px solid rgba(0,0,0, 0.3);
+      transition: border 0.2s ease;
+      &:hover{
+        border: 1px solid rgba(0,0,0, 1);
+        cursor:pointer;
+      }
+    }
+  }
+
+  @import 'second-section-first-part';
+
+  @import 'second-sectio-blog-part';
+
+
+}

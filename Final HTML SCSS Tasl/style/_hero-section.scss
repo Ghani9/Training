@@ -1,0 +1,46 @@
+
+
+.hero-section{
+  background-image: url('/images/JPGs/img_1.jpg');
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: color-burn;
+  @include size(100%, 120vh);
+  background-size: cover;
+  opacity: 1;
+
+  @include flex-box(column, center, center,2rem);
+  color: whitesmoke;
+  
+  @include tablet-screen{
+    padding: 0 2rem;
+  }
+  @include mobile-screen{
+  }
+
+  .hero-tag-line{
+    @include size(60%);
+
+    @include fonts(3rem, 800);
+
+    text-align: center;
+
+    animation: pop-up 1s ease;
+    @include tablet-screen{
+      width: 100%;
+    }
+    @include mobile-screen{
+      @include fonts(2.3rem, 800);
+    }
+  }
+
+  .hero-btn{
+    background-color:$bg-green;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+
+    animation: pop-up 1s ease;
+    animation-timeline: view();
+    animation-range: 0px 450px;
+  }
+
+}

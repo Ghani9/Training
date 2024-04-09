@@ -1,0 +1,127 @@
+
+
+.title-info{
+  margin-right: 3rem;
+  padding-top: 2rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+  .tag-line{
+    font-size: 4rem;
+    width: 100%;
+    top: 10%;
+    z-index: 2;
+    height: fit-content;
+    font-weight: 400;
+    .bold-words{
+      font-weight: 600;
+    }
+    .solution-bar{
+      position: relative;
+      &::after{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2rem;
+        bottom: 90%;
+        border-top: 4px solid $color-blue;
+        border-radius: 50% / 100% 100% 0 0;
+        overflow: hidden;
+    }
+    
+    }
+
+    @include tablet-screen{
+      margin-top: 3rem;
+      font-size: 3rem;
+    }
+    @include mobile-screen{
+      font-size: 2.5rem;
+      margin-bottom: 0;
+      width: 100%;
+      // background-color: bisque;
+    }
+
+  }
+    .tagInfo-btn-container{
+      width: 290px;
+      .info-tag-line{
+        margin-bottom: 2.2rem;
+        font-size: 0.95rem;
+        @include tablet-screen{
+          width: 200px;
+          position: static;
+          margin-top: 2rem;
+          font-size: 1rem;
+          z-index: 2;
+        }
+        @include mobile-screen{
+          margin: 0.5rem 0;
+          margin-top: 0;
+          font-size: 1rem;
+          // text-align: start  ;
+          width: 100%;
+          // background-color: antiquewhite;
+        }
+      }
+      .tag-line-btn{
+        color: $color-white;
+        background-color: $color-blue;
+        @include tablet-screen{
+          margin-top: 1rem;
+        }
+        @include mobile-screen{
+          margin: 0.5rem 0;
+          font-size: 1rem;
+        }
+      }
+
+      @include mobile-screen{
+        width: 100%;
+      }
+    }
+
+    .mobile-image-container{
+      position: absolute;
+      right: 0%;
+      top: 2rem;
+      z-index: -5;
+      .mobile-image{
+        width: 330px;
+        // z-index: -2;
+        @include tablet-screen{
+          top: 0;
+          right: 0;
+          width: 290px;
+        }
+        @include mobile-screen{
+          position: relative;
+          // top: 100%;
+          left:50%;
+          transform: translateX(-50%);
+          margin: 0 auto;
+        }
+      }
+  
+      @include tablet-screen{
+        // margin: 0 auto;
+      }
+      @include mobile-screen{
+        position: static;
+        // background-color: antiquewhite;
+        // background-color: aqua;
+      }
+    }
+
+    @include mobile-screen{
+      // background-color: aquamarine;
+      gap: 1rem;
+    }
+  }
+
+ 

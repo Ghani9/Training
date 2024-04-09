@@ -1,0 +1,58 @@
+
+
+.container{
+  @include flex-box($direction:column);
+  margin: 0 0.5rem;
+  .second-container{
+    @include flex-box(space-between, $gap:0.5rem, $wrap:wrap);
+    width: 100%;
+    .second-container-first-div{
+      @include flex-box(space-between, center, $flex:1, $gap:2rem);
+      background-color: antiquewhite;
+      .p-editing{
+        @include flex-box($align:center);
+        gap: 0.2rem;
+        i{
+          font-size: 0.7rem;
+        }
+      }
+      .p-switchView{
+        text-decoration-line: underline;
+        width: max-content;
+      }
+
+    }
+    .second-container-second-div{
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap-reverse;
+      background-color: bisque; 
+      .details-rules{
+        @include flex-box($align:center);
+        background-color: aquamarine;
+        .p-details{
+          border: 1px solid black ;
+          padding: 0.2rem 0.2rem;
+          border-bottom: none;
+        };
+        .p-rules{
+          border: 1px solid black ;
+          padding: 0.2rem 0.2rem;
+          border-bottom: none;
+          border-left: none;
+        }
+      }
+
+      .property-save{
+        @include flex-box($align:center);
+        gap: 0.5rem;
+        .save-button{
+          background-color: rgb(75, 47, 168);
+          padding: 0.2rem 1.0rem;
+          border-radius: 0.3rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

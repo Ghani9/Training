@@ -1,0 +1,116 @@
+
+.fourth-section{
+  background-color: rgb(245, 245, 245);
+  padding: 2rem 3rem;
+  .part-1-testimonials{
+    @include animation(pop-up, 0.8s, 0px, 300px);
+    // animation:  pop-up 0.8s ease;
+    // animation-timeline: view();
+    // animation-range:0px 300px;
+    // background-color: aquamarine;
+    display: flex;
+    gap: 0rem;
+    justify-content: flex-start;
+    margin: 2rem 0;
+    &>h2{
+      // background-color: bisque;
+      flex:1;
+      color: $bg-green;;
+    }
+    &>p{
+      padding: 0 10rem;
+      opacity: 0.5;
+      flex: 7;
+      // justify-self: flex-start;
+      font-size: 0.9rem;
+      @include tablet-screen{
+        // align-self: flex-start;
+        padding: 0;
+  }
+  }
+    @include tablet-screen{
+      flex-direction:column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+  }
+
+  .fourth-section-cards{
+    @include animation(pop-up, 1s, 0px, 300px);
+    // animation:  pop-up 1s ease;
+    // animation-timeline: view();
+    // animation-range:0px 300px;
+    display: flex;
+    gap: 2rem;
+    margin: 0 2rem;
+    .card{
+      background-color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      p{
+        opacity: 0.5;
+        font-weight: 700;
+        line-height: 1.7rem;
+        font-size: 1rem;
+      }
+      .name-designation-and-img{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        // padding: 0rem 2rem;
+        padding-bottom: 2rem;
+        .profile-img{
+          width: 50px;
+          border-radius: 10rem;
+        }
+        .name-and-designation{
+          display: flex;
+          flex-direction: column;
+          .name{
+            color: black;
+            font-weight: 700;
+          }
+          .designation{
+            font-weight: 400;
+            font-size: 0.9rem;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    @include tablet-screen{
+      .section-4-card-3{
+        display: none;
+      }
+    }
+    @include mobile-screen{
+      .section-4-card-2{
+        display: none;
+      }
+    }
+  }
+
+  .btns{
+    @include animation(pop-up, 1s, 0px, 300px);
+    // animation: pop-up 1s ease;
+    // animation-timeline: view();
+    // animation-range:0px 300px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    .fourth-section-card-btn{
+      border: 1px solid rgba(0,0,0, 0.4);
+      padding: 0.5rem 0.75rem;
+      border-radius: 2rem;
+      transition: border 0.3s ease;
+      &:hover{
+        border: 1px solid rgba(0,0,0, 1);
+        cursor: pointer;
+      }
+    }
+  }
+}

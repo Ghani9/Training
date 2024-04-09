@@ -1,0 +1,25 @@
+
+.card{
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  @include dimensions(300px, 300px);
+  position: absolute;
+  transition: transform 1s ease;
+}
+
+.front-card{
+  background-color: rgb(72, 139, 255);
+  @include flex-box(center, center);
+  z-index: 1;
+  &:hover{
+    transform: translateY(-50%);
+  }
+  &:hover + .back-card{
+    transform: translateY(50%);
+  }
+}
+.back-card{
+  background-color: rgb(255, 255, 255);
+  @include flex-box(center, center, column);
+  padding: 2rem;
+  text-align: center;
+}

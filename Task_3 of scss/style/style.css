@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0;
+  flex: 0;
+  flex-wrap: nowrap;
+  margin: 0 0.5rem;
+}
+.container .second-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 0.5rem;
+  flex: 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.container .second-container .second-container-first-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  flex: 1;
+  flex-wrap: nowrap;
+  background-color: antiquewhite;
+}
+.container .second-container .second-container-first-div .p-editing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  flex: 0;
+  flex-wrap: nowrap;
+  gap: 0.2rem;
+}
+.container .second-container .second-container-first-div .p-editing i {
+  font-size: 0.7rem;
+}
+.container .second-container .second-container-first-div .p-switchView {
+  text-decoration-line: underline;
+  width: -moz-max-content;
+  width: max-content;
+}
+.container .second-container .second-container-second-div {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap-reverse;
+  background-color: bisque;
+}
+.container .second-container .second-container-second-div .details-rules {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  flex: 0;
+  flex-wrap: nowrap;
+  background-color: aquamarine;
+}
+.container .second-container .second-container-second-div .details-rules .p-details {
+  border: 1px solid black;
+  padding: 0.2rem 0.2rem;
+  border-bottom: none;
+}
+.container .second-container .second-container-second-div .details-rules .p-rules {
+  border: 1px solid black;
+  padding: 0.2rem 0.2rem;
+  border-bottom: none;
+  border-left: none;
+}
+.container .second-container .second-container-second-div .property-save {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  flex: 0;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+.container .second-container .second-container-second-div .property-save .save-button {
+  background-color: rgb(75, 47, 168);
+  padding: 0.2rem 1rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+@import 'variables';
+@import 'breakpoints';
+
+body{
+  font-family: "Work Sans", sans-serif;
+}
+@import 'mixins';
+@import 'animations';
+
+@import 'navbar';
+@import 'hero-section';
+@import 'first-section';
+@import 'cards';
+@import 'second-section';
+@import 'third-section';
+@import 'fourth-section';
+@import 'fifth-section';
+@import 'sixth-section';
